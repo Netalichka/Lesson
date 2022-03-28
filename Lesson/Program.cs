@@ -11,6 +11,11 @@ struct Complex
         newComplex.im = im - complex.im;
         return newComplex;
     }
+
+    public override string ToString()
+    {
+        return $"{re} - {im}i";
+    }
     static void Main() 
     {
           Complex complex01;
@@ -25,7 +30,7 @@ struct Complex
         Console.WriteLine(complex02);
 
         Complex complex03 = complex02.Munus(complex01);
-        Console.WriteLine($"Результат вычитания комплексных чисел:{ complex02} - { complex01} = { complex03}");
+        Console.WriteLine($"Результат вычитания комплексных чисел:{complex02} - {complex01} = {complex03}");
        
 
         Console.ReadLine();
